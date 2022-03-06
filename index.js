@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8000;
+const port = 7000;
 
 const env = require("./config/environment");
 const logger = require("morgan");
@@ -45,7 +45,7 @@ const customMware = require("./config/middleware");
 //setting chat engine
 const chatServer = require("http").Server(app);
 const chatSockets = require("./config/chat_sockets").chatSockets(chatServer);
-chatServer.listen(9000);
+chatServer.listen(8000);
 console.log("chat server is listening on port 5000");
 
 //---------------------------------------------------------------------middleware--------------------------------------------------------------------
